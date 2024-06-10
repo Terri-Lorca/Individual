@@ -1,0 +1,40 @@
+<div class="fondo">
+  <main class="main-content">
+    <div class="games-grid">
+      <div
+        class="game-card"
+        (click)="pasarJuego(game)"
+        *ngFor="let game of juegos"
+        [routerLink]="['/game', game.dealID]"
+      >
+        <div class="game-image-container">
+          <img
+            src="{{ game.thumb }}"
+            alt="{{ game.title }}"
+            class="game-image"
+          />
+        </div>
+        <div class="game-details">
+          <div
+            class="score-circle"
+            [style.background-color]="getScoreColor(game.metacriticScore)"
+          >
+            {{ game.metacriticScore }}
+          </div>
+          <h2 class="game-title">{{ game.title }}</h2>
+          <p class="game-description">
+            <span style="text-decoration: line-through"
+              >{{ game.normalPrice }}€
+            </span>
+            {{ game.salePrice }}€
+          </p>
+          <img
+            [src]="getStoreIcon(game.storeID)"
+            alt="Store Icon"
+            class="store-icon"
+          />
+        </div>
+      </div>
+    </div>
+  </main>
+</div>

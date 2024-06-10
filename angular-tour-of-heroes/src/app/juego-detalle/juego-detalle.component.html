@@ -1,0 +1,35 @@
+<div
+  *ngIf="game"
+  class="main-content"
+  [ngStyle]="{ 'background-image': 'url(' + game.thumb + ')' }"
+>
+  <div class="overlay">
+    <div class="content">
+      <h1 class="game-title">{{ game.title }}</h1>
+      <div class="game-image-container">
+        <img [src]="game.thumb" alt="{{ game.title }}" class="game-image" />
+      </div>
+      <p class="game-description">Precio normal: {{ game.normalPrice }}€</p>
+      <p class="game-description">Precio en oferta: {{ game.salePrice }}€</p>
+      <!-- <p class="game-description">Dinero ahorrado: {{ game.savings }}€</p> -->
+      <p class="game-description">
+        Metacritic Score: {{ game.metacriticScore }}
+      </p>
+      <p class="game-description">
+        Steam Rating: {{ game.steamRatingText }} ({{
+          game.steamRatingPercent
+        }}%)
+      </p>
+      <div class="boton">
+        <button class="metacritic-button" (click)="openMetacritic()">
+          Ver en Metacritic
+        </button>
+      </div>
+      <div class="boton">
+        <button class="purchase-button" (click)="openPurchase()">
+          Comprar Ahora
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

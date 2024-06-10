@@ -1,0 +1,79 @@
+body {
+  background: url('/mnt/data/image.png') no-repeat center center fixed;
+  background-size: cover;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  color: black; /* Cambiar color de la letra a negro */
+}
+
+.fondo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.login-container, .admin-container {
+  text-align: center;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.9); /* Aumentar opacidad del fondo */
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+  max-width: 400px;
+  width: 100%;
+  color: black;
+}
+
+.login-container form, .admin-container .game-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: black;
+}
+
+.login-container div, .admin-container .game-item {
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+input[type="text"], input[type="password"] {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  color: black; /* Asegurarse de que el texto dentro del input sea negro */
+}
+
+button {
+  padding: 10px 20px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.error-message {
+  color: red;
+  margin-top: 10px;
+}
+.cuerpo{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.7);
+
+}
+
+.admin-container{
+  margin-top: 100px;
+}

@@ -1,0 +1,86 @@
+.main-content {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.fondo{
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.games-grid {
+  display: grid;
+  padding-top: 100px;
+  padding-bottom: 50px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.game-card {
+  background-color: #1b2838;
+  padding: 15px;
+  border-radius: 30px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  position: relative; /* New for store icon positioning */
+  display: flex;
+  flex-direction: column;
+}
+
+.game-image-container {
+  height: 200px; /* Fixed height for image container */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Prevent overflow */
+}
+
+.game-image {
+  max-width: 100%;
+  border-radius: 5px;
+  object-fit: cover; /* Maintain aspect ratio and cover container */
+}
+
+.game-details {
+  flex-grow: 1;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between; /* Ensure content is spaced correctly */
+  overflow: hidden; /* Prevent overflow */
+}
+
+.game-title {
+  font-size: 18px;
+  margin: 10px 0 0;
+  color: #fff;
+  text-align: center;
+}
+
+.game-description {
+  margin: 0; /* Eliminar márgenes predeterminados */
+  text-align: center; /* Ensure text is centered */
+}
+
+.store-icon {
+  position: absolute; /* Absolute positioning for top-left corner */
+  top: 10%; /* Increased top margin */
+  left: 10px; /* Increased left margin */
+  width: 40px; /* Increased width */
+  height: 40px; /* Increased height */
+}
+
+.score-circle {
+  position: absolute; /* Absolute positioning for the score circle */
+  top: 8%; 
+  right: 20px; /* Adjust horizontal position to the right */
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+  line-height: 40px;
+  display: flex; /* Center content vertically and horizontally */
+  justify-content: center;
+  align-items: center;
+}
